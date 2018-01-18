@@ -1,0 +1,25 @@
+{
+  "name": "Hyperion-Server",
+  "version": "0.1",
+  "slug": "hyperion",
+  "description": "Hyperion Beta for Home Assitant on Raspberry Pi",
+  "arch": ["armhf"],
+  "url": "null",
+  "startup": "initialize",
+  "boot": "auto",
+  "host_network": "true",
+  "map": ["config:rw"],
+  "devices": ["/dev/bus/usb:/dev/bus/usb:rwm","/dev/mem:/dev/mem:rwm"],
+  "gpio": "true",
+  "privileged": "SYS_RAWIO",
+  "ports": {
+    "22/tcp": 222,
+    "19333/tcp": 19333,
+    "19444/tcp": 19444, 
+    "19445/tcp": 19445,
+    "19446/tcp": 19446
+    },
+  "options": {},
+  "schema": {},
+  "image": "homeassistant/{arch}-addon-hyperion-server"
+}
